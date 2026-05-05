@@ -1,7 +1,7 @@
-def is_prime(n):
-    if n <= 1:
+def is_prime(n: int) -> bool:
+    if n < 2:
         return False
-    if n <= 3:
+    if n in (2, 3):
         return True
     if n % 2 == 0 or n % 3 == 0:
         return False
@@ -14,11 +14,5 @@ def is_prime(n):
 
 
 if __name__ == "__main__":
-    try:
-        num = int(input("Enter a number: "))
-        if is_prime(num):
-            print(f"{num} is a prime number")
-        else:
-            print(f"{num} is not a prime number")
-    except ValueError:
-        print("Please enter a valid integer.")
+    number = 29
+    print(f"{number} is {'prime' if is_prime(number) else 'not prime'}")
