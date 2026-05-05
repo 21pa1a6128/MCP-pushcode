@@ -1,13 +1,15 @@
-def is_prime(n):
-    if n <= 1:
+def is_prime(number: int) -> bool:
+    """Return True if number is prime, otherwise False."""
+    if number < 2:
         return False
-    if n <= 3:
+    if number in (2, 3):
         return True
-    if n % 2 == 0 or n % 3 == 0:
+    if number % 2 == 0 or number % 3 == 0:
         return False
+
     i = 5
-    while i * i <= n:
-        if n % i == 0 or n % (i + 2) == 0:
+    while i * i <= number:
+        if number % i == 0 or number % (i + 2) == 0:
             return False
         i += 6
     return True
@@ -15,10 +17,7 @@ def is_prime(n):
 
 if __name__ == "__main__":
     try:
-        num = int(input("Enter a number: "))
-        if is_prime(num):
-            print(f"{num} is a prime number")
-        else:
-            print(f"{num} is not a prime number")
+        value = int(input("Enter a number: "))
+        print(f"{value} is prime: {is_prime(value)}")
     except ValueError:
         print("Please enter a valid integer.")
