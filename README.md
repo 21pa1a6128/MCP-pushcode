@@ -1,5 +1,13 @@
-# MCP pushcode
+# MCP-pushcode
 
-Testing MCP functionality.
+This branch is used to test MCP pull request functionality.
 
-This repository contains a simple Python program to check whether a number is prime.
+## What is included
+- A refreshed README
+- A simple Python prime number checker
+- A requirements file for project dependencies
+
+## Quick run
+```bash
+python prime_checker.py
+```
